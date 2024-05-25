@@ -26,7 +26,7 @@ button {
     border: 1px solid;
     border-radius: 10px;
     border-color: green;
-    height: 100px;
+    height: 40px;
     min-width: 100px;
     text-align: center;
     transition: 0.3s;
