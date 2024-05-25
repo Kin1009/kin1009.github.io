@@ -20,13 +20,10 @@ button {
     color: white;
     font-family: "Segoe UI";
     font-weight: bold;
-    float: center;
     background-color: darkgreen;
-    text-decoration: underline;
     border: 1px solid;
     border-radius: 10px;
     border-color: green;
-    height: 40px;
     min-width: 100px;
     text-align: center;
     transition: 0.3s;
