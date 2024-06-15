@@ -1,0 +1,65 @@
+body {
+    background-color: lightgray;
+    margin: 10;
+    font-family: "Segoe UI";
+    float: left;
+    color: white;
+}
+a:link, a:visited, a:hover, a:active {
+    color: white;
+    font-family: "Segoe UI";
+    font-weight: bold;
+    float: left;
+    background-color: transparent;
+    text-decoration: underline;
+
+}
+button {
+    color: white;
+    font-family: "Segoe UI";
+    font-weight: bold;
+    background-color: darkgray;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: gray;
+    min-width: 100px;
+    text-align: center;
+    transition: 0.3s;
+}
+button:hover {
+    color: black;
+    background-color: gray;
+    border-color: lightgray;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+input, button {
+    padding: 10px;
+    margin: 10px 0;
+}
+input[type="text"] {
+    width: calc(100% - 120px);
+    display: inline-block;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.message {
+    margin: 10px 0;
+    color: green;
+}
