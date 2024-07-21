@@ -2,20 +2,20 @@ body {
     background-image: url("https://kin1009.github.io/files/background.png");
     background-size: cover;
     background-attachment: fixed;
-    margin: 10;
+    margin: 10px;
     font-family: "Segoe UI";
-    float: left;
     color: white;
+    text-align: center;
 }
+
 a:link, a:visited, a:hover, a:active {
     color: white;
     font-family: "Segoe UI";
     font-weight: bold;
-    float: left;
     background-color: transparent;
     text-decoration: underline;
-
 }
+
 button {
     color: white;
     font-family: "Segoe UI";
@@ -27,7 +27,9 @@ button {
     min-width: 100px;
     text-align: center;
     transition: 0.3s;
+    margin: 10px;
 }
+
 button:hover {
     color: black;
     background-color: green;
