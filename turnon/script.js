@@ -8,6 +8,9 @@ function startGame() {
     document.getElementById('score').innerText = `Score: ${score}`;
     document.getElementById('timer').innerText = `Time left: ${timeLeft}s`;
     document.getElementById('retry-button').style.display = 'none';
+    document.getElementById('rules').style.display = 'none';
+    document.getElementById('game').style.display = 'block';
+    document.getElementById('home-button').style.display = 'none';
     createCheckboxes();
     startTimer();
 }
@@ -40,9 +43,16 @@ function startTimer() {
         document.getElementById('timer').innerText = `Time left: ${timeLeft}s`;
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
+            document.getElementById('game').style.display = 'none';
+            document.getElementById('home-button').style.display = 'block';
             document.getElementById('retry-button').style.display = 'block';
         }
     }, 1000);
 }
 
-window.onload = startGame;
+window.onload = () => {
+    document.getElementById('rules').style.display = 'block';
+    document.getElementById('game').style.display = 'none';
+    document.getElementById('home-button').style.display = 'block';
+    document.getElementById('retry-button').style.display = 'none';
+};
