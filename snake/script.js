@@ -7,7 +7,7 @@ const totalCells = canvasSize / gridSize;
 
 let snake = [{x: 10, y: 10}];
 let food = {x: Math.floor(Math.random() * totalCells), y: Math.floor(Math.random() * totalCells)};
-let dx = 0;
+let dx = 1;
 let dy = 0;
 let score = 0;
 let gameLoop;
@@ -73,15 +73,19 @@ function gameTick() {
 }
 
 function startGame() {
-    dx = 1;
-    dy = 0;
     if (!gameLoop) {
         gameLoop = setInterval(gameTick, 100);
     }
 }
 
 function pauseGame() {
-    isPaused = !isPaused;
+    if (isPaused) {
+        isPaused = false;
+        gameLoop = setInterval(gameTick, 100);
+    } else {
+        isPaused = true;
+        clearInterval(gameLoop);
+    }
 }
 
 function resetGame() {
@@ -91,7 +95,7 @@ function resetGame() {
     document.getElementById("score").textContent = score;
     snake = [{x: 10, y: 10}];
     food = {x: Math.floor(Math.random() * totalCells), y: Math.floor(Math.random() * totalCells)};
-    dx = 0;
+    dx = 1;
     dy = 0;
     isPaused = false;
     draw();
