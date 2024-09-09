@@ -6,15 +6,32 @@ function getQueryParam(param) {
     return urlParams.get(param);
 }
 
-// Check for the 'l' parameter and redirect if it exists
-function redirectToLink() {
-    const link = getQueryParam('l'); // Get the value of the 'l' parameter
+// Function to decode a base64-encoded string
+function decodeBase64(encodedString) {
+    try {
+        // Decode the base64 string
+        return atob(encodedString);
+    } catch (e) {
+        console.error('Error decoding base64 string:', e);
+        return null;
+    }
+}
 
-    // Check if 'l' parameter exists and is a valid URL
-    if (link && isValidURL(link)) {
-        window.location.href = link; // Redirect to the specified URL
+// Check for the 'l' parameter, decode it, and redirect if it is a valid URL
+function redirectToLink() {
+    const encodedLink = getQueryParam('l'); // Get the base64-encoded value of the 'l' parameter
+
+    if (encodedLink) {
+        const decodedLink = decodeBase64(encodedLink); // Decode the base64 string
+
+        // Check if the decoded link is a valid URL
+        if (decodedLink && isValidURL(decodedLink)) {
+            window.location.href = decodedLink; // Redirect to the decoded URL
+        } else {
+            console.error('Invalid or missing URL in parameter "l" after decoding.');
+        }
     } else {
-        console.error('Invalid or missing URL in parameter "l"');
+        console.error('No "l" parameter found in the URL.');
     }
 }
 
