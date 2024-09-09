@@ -21,7 +21,7 @@ function createShortLink() {
 
         if (encodedUrl) {
             // Construct the short link with the base64 encoded value
-            const shortLink = `${window.location.origin}${window.location.pathname}?l=${encodedUrl}`;
+            const shortLink = `https://kin1009.github.io/shorturl?l=${encodedUrl}`;
             
             // Display the encoded link in the anchor element
             const encodedLinkElement = document.getElementById('encodedLink');
