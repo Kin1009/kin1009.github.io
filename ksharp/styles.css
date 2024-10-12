@@ -18,11 +18,32 @@ body {
 }
 
 .sidebar {
-    width: 30%;
     background-color: #006baa; /* Blue color */
     justify-content: left;
     align-items: center;
     padding: 20px;
+    width: 30%; /* Default width */
+}
+
+/* Media query for larger screens */
+@media (min-width: 1200px) {
+    .sidebar {
+        width: 10%; /* Narrower width for larger screens */
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .sidebar {
+        width: 30%; /* Wider width for smaller screens */
+    }
+}
+
+/* Ensure the blue part fits the content */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* Extend blue background to fit content */
 }
 
 .sidebar img {

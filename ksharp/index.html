@@ -10,9 +10,19 @@
     <div class="container">
         <div class="sidebar">
             <img src="ksharp.png" alt="Documentation Image">
+            <ul>
+                <li><a href="#variables">Variables</a></li>
+                <li><a href="#functions">Functions</a></li>
+                <li><a href="#control-flows">Control Flows</a></li>
+                <li><a href="#modules">Modules</a></li>
+                <li><a href="#print-println">Print and Println</a></li>
+                <li><a href="#rules">Rules</a></li>
+                <li><a href="#execp">execp</a></li>
+                <li><a href="#modules-available">Modules Available</a></li>
+            </ul>
         </div>
         <div class="content">
-            <h1>K# Documentation</h1>
+            <h1 id="variables">K# Documentation</h1>
             <br/>
             <h2>Variables</h2>
             <h3>1. Making a variable</h3>
@@ -27,9 +37,7 @@ print(b);
             </pre></p>
             <h3>2. Setting a variable</h3>
             <h4>K# is dynamic-typed, so unlike C#, you could set a string to an int.</h4>
-            <h4>
-                Syntax:
-            </h4>
+            <h4>Syntax:</h4>
             <p class="code"><pre>
 a = value; #Assignment
 a += value; #Add
@@ -72,7 +80,7 @@ print(a); #['1', 2]
 b = input("Enter a value: "); #input a
 a append b;    #error: "a" is not defined
             </pre></p>
-            <h2>Functions</h2>
+            <h2 id="functions">Functions</h2>
             <h3>1. Declaring a function</h3>
             <h4>Syntax:</h4>
             <p class="code"><pre>func funcname() {func_data;}</pre></p>
@@ -99,13 +107,11 @@ println(area);
             <p class="code"><pre>funcname(val1, val2);</pre></p>
             <p class="code"><pre>funcname(val1, val2, val3); #use many params as you want</pre></p>
             <h4>Example: See "Area calculator"</h4>
-            <h3>
-                3. return
-            </h3>
+            <h3>3. return</h3>
             <h4>Syntax:</h4>
             <p class="code"><pre>return value;</pre></p>
             <h4>Example: See "Area calculator"</h4>
-            <h2>Control flows</h2>
+            <h2 id="control-flows">Control flows</h2>
             <h3>1. if / else</h3>
             <h4>Syntax:</h4>
             <p class="code"><pre>if (condition) {codegoeshere;}</pre></p>
@@ -153,7 +159,7 @@ print(a);
 a += 1;
 } # prints 2 once
             </pre></p>
-            <h2>Modules</h2>
+            <h2 id="modules">Modules</h2>
             <h3>1. Creating them</h3>
             <h4>To create a module, first create a file with extension .kshp, then write the module.</h4>
             <h3>2. Using them</h3>
@@ -161,22 +167,18 @@ a += 1;
             <p class="code"><pre>using "path/to/module";</pre></p>
             <h4>Then use the module by functions (without "modulename.functionname") or vars.</h4>
             <h4>Basically, filedata = module + mainprog</h4>
-            <h2>print and println</h2>
+            <h2 id="print-println">Print and Println</h2>
             <h3>So basically, print(text) is print(text, end='') in python</h3>
             <h3>println(text) however is print(text) in python</h3>
-            <h2>Rules</h2>
+            <h2 id="rules">Rules</h2>
             <ul>
                 <li>When ref-ing a variable but it's a string, add '' to ends.</li>
                 <li>More rules added soon</li>
             </ul>
-            <h2>
-                Tkinter and PyQt
-            </h2>
-            <h3>Undocumentated, sadly.</h3>
-            <h2>execp</h2>
+            <h2 id="execp">execp</h2>
             <h3>Syntax:</h3>
-            <p class="code"><pre>execp "pythoncode";</pre></p>
-            <h2>Modules available</h2>
+            <p class="code"><pre>execp "pythoncode"</pre></p>
+            <h2 id="modules-available">Modules Available</h2>
             <ul>
                 <li>sys</li>
                 <li>math</li>
