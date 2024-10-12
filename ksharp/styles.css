@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #f0f0f0;
+    background-color: #d3d3d35e;
 }
 
 .container {
@@ -31,17 +31,17 @@ body {
 
 .content {
     width: 70%;
-    background-color: #d3d3d3; /* Gray color */
+    background-color: #d3d3d35e; /* Gray color */
     padding: 40px;
     overflow-y: auto;
 }
 
 h1 {
-    color: #333;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
 p {
-    color: #555;
+    color: #8a8a8a;
     line-height: 1.6;
 }
