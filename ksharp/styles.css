@@ -20,7 +20,7 @@ body {
     background-color: #0073b7; /* Blue color */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     padding: 20px;
 }
 
