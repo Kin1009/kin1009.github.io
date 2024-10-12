@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Segoe UI";
+    color: #ffffff;
+    margin-bottom: 20px;
 }
 
 body {
@@ -35,10 +37,11 @@ body {
     padding: 40px;
     overflow-y: auto;
 }
-
-h1 h2 h3 h4 h5 h6 {
-    color: #ffffff;
-    margin-bottom: 20px;
+.code {
+    font-family: "Consolas";
+    background-color: black;
+    border-color: white;
+    border-radius: 10;
 }
 
 p {
