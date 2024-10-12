@@ -19,7 +19,7 @@ body {
     width: 30%;
     background-color: #0073b7; /* Blue color */
     display: flex;
-    justify-content: top;
+    justify-content: center;
     align-items: top;
     padding: 20px;
 }
