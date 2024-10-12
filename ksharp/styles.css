@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #d3d3d35e;
+    background-color: #3b3b3b5e;
 }
 
 .container {
@@ -31,7 +31,7 @@ body {
 
 .content {
     width: 70%;
-    background-color: #d3d3d35e; /* Gray color */
+    background-color: #3b3b3b5e; /* Gray color */
     padding: 40px;
     overflow-y: auto;
 }
