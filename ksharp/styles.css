@@ -42,7 +42,7 @@ body {
     background-color: black;
     border-color: white;
     border-radius: 10px;
-    margin-left: 10px;
+    text-indent: 10px;
 }
 
 p {
