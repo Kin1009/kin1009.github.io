@@ -17,7 +17,183 @@
             <h2>Variables</h2>
             <h3>1. Making a variable</h3>
             <h4>Syntax:</h4>
-            <p class="code">var var_name = ...;</p>
+            <p class="code"><pre>var var_name = value;</pre></p>
+            <h4>Examples:</h4>
+            <p class="code"><pre>var a = 1;
+var b = 2;
+print(a);
+print(b);
+# This prints 12 on console, see "print and println".
+            </pre></p>
+            <h3>2. Setting a variable</h3>
+            <h4>K# is dynamic-typed, so unlike C#, you could set a string to an int.</h4>
+            <h4>
+                Syntax:
+            </h4>
+            <p class="code"><pre>
+a = value; #Assignment
+a += value; #Add
+a -= value; #Subtract 
+a *= value; #Multiply 
+...
+It also applies to every python operator that has "=" (except :=)
+            </pre></p>
+            <h4>Examples:</h4>
+            <p class="code"><pre>
+var a = 1;
+print(a); #1
+a += 1;
+print(a); #2
+            </pre></p>
+            <h3>3. Type functions</h3>
+            <h4>This has all builtin type functions for functions that return None (in-place)</h4>
+            <h4>Syntax:</h4>
+            <p class="code"><pre>
+varname append item; #varname.append(item) in py
+varname extend iterable; #varname.extend(iterable)
+varname remove item; #varname.remove(item)
+varname sort; #varname.sort()
+varname reverse; #varname.reverse()
+varname clear; #varname.clear()
+varname insert (index, value); #varname.insert(index, value)
+varname add item; #varname.add(item)
+varname update item; #varname.update(item)
+varname discard item; #varname.discard(item)
+varname intersection_update iterable; #varname.intersection_update(iterable)
+            </pre></p>
+            <h4>Examples:</h4>
+            <p class="code"><pre>var a = [];
+var b = input("Enter a value: "); #input 1
+a append 'b';    #for tostring conversion on k#
+print(a); #['1'] bcz user input
+b = input("Enter a value: "); #input 2
+a append b;    #for eval on k#
+print(a); #['1', 2]
+b = input("Enter a value: "); #input a
+a append b;    #error: "a" is not defined
+            </pre></p>
+            <h2>Functions</h2>
+            <h3>1. Declaring a function</h3>
+            <h4>Syntax:</h4>
+            <p class="code"><pre>func funcname() {func_data;}</pre></p>
+            <p class="code"><pre>func funcname(paramname) {func_data;}</pre></p>
+            <p class="code"><pre>func funcname(paramname=defaultval) {func_data;}</pre></p>
+            <p class="code"><pre>func funcname(paramname, anotherparam) {func_data;}</pre></p>
+            <p class="code"><pre>func funcname(paramname, anotherparam=defaultval) {func_data;}</pre></p>
+            <p class="code"><pre>func funcname(paramname, anotherparam=defaultval, anotherparam2=defaultval2) {func_data;}</pre></p>
+            <h4>Example (Area calculator):</h4>
+            <p class="code"><pre>func calculatearea(width, height) {
+    var a = height * width;
+    return a;
+}
+var w = int(input("Enter width: "));
+var h = int(input("Enter height: "));
+var area = calculatearea(w, h);
+print("Area: ");
+println(area);
+            </pre></p>
+            <h3>2. Calling functions</h3>
+            <h4>Syntax:</h4>
+            <p class="code"><pre>funcname();</pre></p>
+            <p class="code"><pre>funcname(val);</pre></p>
+            <p class="code"><pre>funcname(val1, val2);</pre></p>
+            <p class="code"><pre>funcname(val1, val2, val3); #use many params as you want</pre></p>
+            <h4>Example: See "Area calculator"</h4>
+            <h3>
+                3. return
+            </h3>
+            <h4>Syntax:</h4>
+            <p class="code"><pre>return value;</pre></p>
+            <h4>Example: See "Area calculator"</h4>
+            <h2>Control flows</h2>
+            <h3>1. if / else</h3>
+            <h4>Syntax:</h4>
+            <p class="code"><pre>if (condition) {codegoeshere;}</pre></p>
+            <p class="code"><pre>if (condition) {codegoeshere;} else {anothercodegoeshere;}</pre></p>
+            <h4>Examples:</h4>
+            <p class="code"><pre>var a = 1;
+if (a == 12) {
+    println("Hi12");
+}
+if (a > 12) {
+    print("Hi");
+}
+else {
+    print("Hi2");
+}
+            </pre></p>
+            <h3>2. while</h3>
+            <h4>Syntax:</h4>
+            <p class="code"><pre>while (condition) {codegoeshere;}</pre></p>
+            <h4>Example:</h4>
+            <p class="code"><pre>
+var a = 2;
+while (a == 2) {
+    print(a);
+} # forever print 2
+            </pre></p>
+            <h3>3. for</h3>
+            <h4>Syntax:</h4>
+            <p class="code"><pre>for (newvarname, iterable) {codegoeshere;}</pre></p>
+            <h4>Example:</h4>
+            <p class="code"><pre>
+var a = [1, 2, 3, 4, 5];
+for (b, a) {
+    print(b);
+} # 12345   
+            </pre></p>
+            <h3>4. until</h3>
+            <h4>Syntax:</h4>
+            <p class="code"><pre>until (condition) {codegoeshere;}</pre></p>
+            <h4>Example:</h4>
+            <p class="code"><pre>
+var a = 2;
+until (a != 2) {
+print(a);
+a += 1;
+} # prints 2 once
+            </pre></p>
+            <h2>Modules</h2>
+            <h3>1. Creating them</h3>
+            <h4>To create a module, first create a file with extension .kshp, then write the module.</h4>
+            <h3>2. Using them</h3>
+            <h4>Syntax:</h4>
+            <p class="code"><pre>using "path/to/module";</pre></p>
+            <h4>Then use the module by functions (without "modulename.functionname") or vars.</h4>
+            <h4>Basically, filedata = module + mainprog</h4>
+            <h2>print and println</h2>
+            <h3>So basically, print(text) is print(text, end='') in python</h3>
+            <h3>println(text) however is print(text) in python</h3>
+            <h2>Rules</h2>
+            <ul>
+                <li>When ref-ing a variable but it's a string, add '' to ends.</li>
+                <li>More rules added soon</li>
+            </ul>
+            <h2>
+                Tkinter and PyQt
+            </h2>
+            <h3>Undocumentated, sadly.</h3>
+            <h2>execp</h2>
+            <h3>Syntax:</h3>
+            <p class="code"><pre>execp "pythoncode";</pre></p>
+            <h2>Modules available</h2>
+            <ul>
+                <li>sys</li>
+                <li>math</li>
+                <li>random</li>
+                <li>time</li>
+                <li>datetime</li>
+                <li>os</li>
+                <li>json</li>
+                <li>requests</li>
+                <li>re</li>
+                <li>collections</li>
+                <li>tk</li>
+                <li>ttk</li>
+                <li>qtcore</li>
+                <li>qtwidget</li>
+                <li>qtgui</li>
+            </ul>
         </div>
     </div>
 </body>

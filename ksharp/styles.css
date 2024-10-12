@@ -39,7 +39,7 @@ body {
 }
 .code {
     font-family: "Consolas";
-    background-color: black;
+    background-color: #222222;
     border-color: white;
     border-radius: 10px;
     text-indent: 10px;
