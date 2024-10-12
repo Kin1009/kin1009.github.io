@@ -41,7 +41,7 @@ body {
     font-family: "Consolas";
     background-color: black;
     border-color: white;
-    border-radius: 10;
+    border-radius: 10px;
 }
 
 p {
