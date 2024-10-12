@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #3b3b3b5e;
+    background-color: #333333;
 }
 
 .container {
@@ -17,7 +17,7 @@ body {
 
 .sidebar {
     width: 30%;
-    background-color: #0073b7; /* Blue color */
+    background-color: #006baa; /* Blue color */
     justify-content: left;
     align-items: center;
     padding: 20px;
@@ -31,7 +31,7 @@ body {
 
 .content {
     width: 70%;
-    background-color: #3b3b3b5e; /* Gray color */
+    background-color: #333333; /* Gray color */
     padding: 40px;
     overflow-y: auto;
 }
@@ -42,6 +42,6 @@ h1 {
 }
 
 p {
-    color: #8a8a8a;
+    color: #ffffff;
     line-height: 1.6;
 }
