@@ -18,9 +18,8 @@ body {
 .sidebar {
     width: 30%;
     background-color: #0073b7; /* Blue color */
-    display: flex;
-    justify-content: center;
-    align-items: top;
+    justify-content: left;
+    align-items: center;
     padding: 20px;
 }
 
