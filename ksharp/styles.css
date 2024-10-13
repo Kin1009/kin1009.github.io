@@ -35,8 +35,9 @@ body {
 
 /* Sidebar image styling */
 .sidebar img {
-    max-width: 75%;
     height: auto;
+    width: auto;
+    max-width: 15%;
     border-radius: 15px;
 }
 
