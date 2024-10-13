@@ -29,9 +29,9 @@
             <h2>Variables</h2>
             <h3>1. Making a variable</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">var var_name = value;</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">var var_name = value;</pre></p>
             <h4>Examples:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">var a = 1;
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">var a = 1;
 var b = 2;
 print(a);
 print(b);
@@ -40,7 +40,7 @@ print(b);
             <h3>2. Setting a variable</h3>
             <h4>K# is dynamic-typed, so unlike C#, you could set a string to an int.</h4>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">
 a = value; #Assignment
 a += value; #Add
 a -= value; #Subtract 
@@ -49,7 +49,7 @@ a *= value; #Multiply
 It also applies to every python operator that has "=" (except :=)
             </pre></p>
             <h4>Examples:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">
 var a = 1;
 print(a); #1
 a += 1;
@@ -58,7 +58,7 @@ print(a); #2
             <h3>3. Type functions</h3>
             <h4>This has all builtin type functions for functions that return None (in-place)</h4>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">
 varname append item; #varname.append(item) in py
 varname extend iterable; #varname.extend(iterable)
 varname remove item; #varname.remove(item)
@@ -72,7 +72,7 @@ varname discard item; #varname.discard(item)
 varname intersection_update iterable; #varname.intersection_update(iterable)
             </pre></p>
             <h4>Examples:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">var a = [];
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">var a = [];
 var b = input("Enter a value: "); #input 1
 a append 'b';    #for tostring conversion on k#
 print(a); #['1'] bcz user input
@@ -85,14 +85,14 @@ a append b;    #error: "a" is not defined
             <h2 id="functions">Functions</h2>
             <h3>1. Declaring a function</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">func funcname() {func_data;}</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">func funcname(paramname) {func_data;}</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">func funcname(paramname=defaultval) {func_data;}</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">func funcname(paramname, anotherparam) {func_data;}</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">func funcname(paramname, anotherparam=defaultval) {func_data;}</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">func funcname(paramname, anotherparam=defaultval, anotherparam2=defaultval2) {func_data;}</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">func funcname() {func_data;}</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">func funcname(paramname) {func_data;}</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">func funcname(paramname=defaultval) {func_data;}</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">func funcname(paramname, anotherparam) {func_data;}</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">func funcname(paramname, anotherparam=defaultval) {func_data;}</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">func funcname(paramname, anotherparam=defaultval, anotherparam2=defaultval2) {func_data;}</pre></p>
             <h4>Example (Area calculator):</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">func calculatearea(width, height) {
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">func calculatearea(width, height) {
     var a = height * width;
     return a;
 }
@@ -104,22 +104,22 @@ println(area);
             </pre></p>
             <h3>2. Calling functions</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">funcname();</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">funcname(val);</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">funcname(val1, val2);</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">funcname(val1, val2, val3); #use many params as you want</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">funcname();</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">funcname(val);</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">funcname(val1, val2);</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">funcname(val1, val2, val3); #use many params as you want</pre></p>
             <h4>Example: See "Area calculator"</h4>
             <h3>3. return</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">return value;</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">return value;</pre></p>
             <h4>Example: See "Area calculator"</h4>
             <h2 id="control-flows">Control flows</h2>
             <h3>1. if / else</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">if (condition) {codegoeshere;}</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">if (condition) {codegoeshere;} else {anothercodegoeshere;}</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">if (condition) {codegoeshere;}</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">if (condition) {codegoeshere;} else {anothercodegoeshere;}</pre></p>
             <h4>Examples:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">var a = 1;
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">var a = 1;
 if (a == 12) {
     println("Hi12");
 }
@@ -132,9 +132,9 @@ else {
             </pre></p>
             <h3>2. while</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">while (condition) {codegoeshere;}</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">while (condition) {codegoeshere;}</pre></p>
             <h4>Example:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">
 var a = 2;
 while (a == 2) {
     print(a);
@@ -142,9 +142,9 @@ while (a == 2) {
             </pre></p>
             <h3>3. for</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">for (newvarname, iterable) {codegoeshere;}</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">for (newvarname, iterable) {codegoeshere;}</pre></p>
             <h4>Example:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">
 var a = [1, 2, 3, 4, 5];
 for (b, a) {
     print(b);
@@ -152,9 +152,9 @@ for (b, a) {
             </pre></p>
             <h3>4. until</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">until (condition) {codegoeshere;}</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">until (condition) {codegoeshere;}</pre></p>
             <h4>Example:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">
 var a = 2;
 until (a != 2) {
 print(a);
@@ -166,7 +166,7 @@ a += 1;
             <h4>To create a module, first create a file with extension .kshp, then write the module.</h4>
             <h3>2. Using them</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">using "path/to/module";</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">using "path/to/module";</pre></p>
             <h4>Then use the module by functions (without "modulename.functionname") or vars.</h4>
             <h4>Basically, filedata = module + mainprog</h4>
             <h2 id="print-println">Print and Println</h2>
@@ -179,7 +179,7 @@ a += 1;
             </ul>
             <h2 id="execp">execp</h2>
             <h3>Syntax:</h3>
-            <p><pre style="font-family: Consolas; border-radius: 10px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">execp "pythoncode"</pre></p>
+            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px; text-indent: 10px;">execp "pythoncode"</pre></p>
             <h2 id="modules-available">Modules Available</h2>
             <ul>
                 <li>sys</li>
