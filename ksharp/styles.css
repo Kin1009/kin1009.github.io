@@ -18,11 +18,17 @@ body {
 }
 
 .sidebar {
-    background-color: #333333; /* Blue color */
+    background-color: #333333; /* Gray color */
     justify-content: left;
     align-items: center;
     padding: 20px;
     width: 30%; /* Default width */
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* Fixes sidebar in the top-left corner */
+    top: 0; /* Aligns to the top */
+    left: 15px; /* Aligns to the left */
+    height: 100vh; /* Full viewport height */
 }
 
 /* Media query for larger screens */
@@ -39,31 +45,23 @@ body {
     }
 }
 
-/* Ensure the blue part fits the content */
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%; /* Extend blue background to fit content */
-}
-
+/* Sidebar image styling */
 .sidebar img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
+
+
 .content {
     width: 70%;
     background-color: #333333; /* Gray color */
     padding: 40px;
-    overflow-y: auto;
-}
-.code {
-    font-family: "Consolas";
-    background-color: #222222;
-    border-color: white;
-    border-radius: 10px;
-    text-indent: 10px;
+    overflow-wrap: break-word;
+    overflow-y: visible;
+    margin-left: 100px;
+    height: 100%;
 }
 
 p {
