@@ -59,7 +59,6 @@ body {
     background-color: #333333; /* Gray color */
     padding: 40px;
     overflow-wrap: break-word;
-    overflow-y: visible;
     margin-left: 100px;
     height: 100%;
 }
