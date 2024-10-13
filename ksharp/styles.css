@@ -44,6 +44,18 @@ body {
         width: 30%; /* Wider width for smaller screens */
     }
 }
+@media (min-width: 1200px) {
+    .content {
+        margin-left: 10%; /* Narrower width for larger screens */
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .content {
+        margin-left: 30%; /* Wider width for smaller screens */
+    }
+}
 
 /* Sidebar image styling */
 .sidebar img {
@@ -59,12 +71,12 @@ body {
     background-color: #333333; /* Gray color */
     padding: 40px;
     overflow-wrap: break-word;
-    margin-left: 100px;
     height: 100%;
-    
+
 }
 
 p {
     color: #ffffff;
     line-height: 1.6;
+    overflow-wrap: break-word;
 }
