@@ -35,10 +35,10 @@ body {
 
 /* Sidebar image styling */
 .sidebar img {
-    height: auto;
+    height: 10%;
     width: auto;
     max-width: 100%;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 
