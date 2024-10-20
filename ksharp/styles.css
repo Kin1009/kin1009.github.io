@@ -58,3 +58,12 @@ p {
     line-height: 1.6;
     overflow-wrap: break-word;
 }
+pre {
+    font-family: Consolas;
+    border-radius: 5px;
+    background-color:#2a2a2a;
+    text-wrap: wrap;
+    text-align: 15%;
+    font-size: 8;
+    line-height: 20px;
+}

@@ -30,9 +30,9 @@
             <h2>Variables</h2>
             <h3>1. Making a variable</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">var var_name = value;</pre></p>
+            <p><pre>var var_name = value;</pre></p>
             <h4>Examples:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">var a = 1;
+            <p><pre>var a = 1;
 var b = 2;
 print(a);
 print(b);
@@ -41,7 +41,7 @@ print(b);
             <h3>2. Setting a variable</h3>
             <h4>K# is dynamic-typed, so unlike C#, you could set a string to an int.</h4>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">
+            <p><pre>
 a = value; #Assignment
 a += value; #Add
 a -= value; #Subtract 
@@ -50,7 +50,7 @@ a *= value; #Multiply
 It also applies to every python operator that has "=" (except :=)
             </pre></p>
             <h4>Examples:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">
+            <p><pre>
 var a = 1;
 print(a); #1
 a += 1;
@@ -59,7 +59,7 @@ print(a); #2
             <h3>3. Type functions</h3>
             <h4>This has all builtin type functions for functions that return None (in-place)</h4>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">
+            <p><pre>
 varname append item; #varname.append(item) in py
 varname extend iterable; #varname.extend(iterable)
 varname remove item; #varname.remove(item)
@@ -73,7 +73,7 @@ varname discard item; #varname.discard(item)
 varname intersection_update iterable; #varname.intersection_update(iterable)
             </pre></p>
             <h4>Examples:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">var a = [];
+            <p><pre>var a = [];
 var b = input("Enter a value: "); #input 1
 a append 'b';    #for tostring conversion on k#
 print(a); #['1'] bcz user input
@@ -86,14 +86,14 @@ a append b;    #error: "a" is not defined
             <h2 id="functions">Functions</h2>
             <h3>1. Declaring a function</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">func funcname() {func_data;}</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">func funcname(paramname) {func_data;}</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">func funcname(paramname=defaultval) {func_data;}</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">func funcname(paramname, anotherparam) {func_data;}</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">func funcname(paramname, anotherparam=defaultval) {func_data;}</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">func funcname(paramname, anotherparam=defaultval, anotherparam2=defaultval2) {func_data;}</pre></p>
+            <p><pre>func funcname() {func_data;}</pre></p>
+            <p><pre>func funcname(paramname) {func_data;}</pre></p>
+            <p><pre>func funcname(paramname=defaultval) {func_data;}</pre></p>
+            <p><pre>func funcname(paramname, anotherparam) {func_data;}</pre></p>
+            <p><pre>func funcname(paramname, anotherparam=defaultval) {func_data;}</pre></p>
+            <p><pre>func funcname(paramname, anotherparam=defaultval, anotherparam2=defaultval2) {func_data;}</pre></p>
             <h4>Example (Area calculator):</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">func calculatearea(width, height) {
+            <p><pre>func calculatearea(width, height) {
     var a = height * width;
     return a;
 }
@@ -105,22 +105,41 @@ println(area);
             </pre></p>
             <h3>2. Calling functions</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">funcname();</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">funcname(val);</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">funcname(val1, val2);</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">funcname(val1, val2, val3); #use many params as you want</pre></p>
+            <p><pre>funcname();</pre></p>
+            <p><pre>funcname(val);</pre></p>
+            <p><pre>funcname(val1, val2);</pre></p>
+            <p><pre>funcname(val1, val2, val3); #use many params as you want</pre></p>
             <h4>Example: See "Area calculator"</h4>
             <h3>3. return</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">return value;</pre></p>
+            <p><pre>return value;</pre></p>
             <h4>Example: See "Area calculator"</h4>
+            <h3>4. Inheritable functions</h3>
+            <h4>This could be useful for class-like structs (no classes in K#)</h4>
+            <h4>Syntax</h4>
+            <p><pre>func funcname : anotherfuncname {code}</pre></p>
+            <p><pre>func funcname : anotherfuncname(additionalparams) {code}</pre></p>
+            <h4>Example</h4>
+            <p><pre>func nums(a, b) {
+println("Value 1: " + str(a));
+println("Value 2: " + str(b));
+}
+func add : nums {
+    println("Sum: " + str(a + b));
+}
+add(1, 2);
+# -> Value 1: 1
+# Value 2: 2
+# Sum: 3
+            </pre></p>
+            
             <h2 id="control-flows">Control flows</h2>
             <h3>1. if / else</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">if (condition) {codegoeshere;}</pre></p>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">if (condition) {codegoeshere;} else {anothercodegoeshere;}</pre></p>
+            <p><pre>if (condition) {codegoeshere;}</pre></p>
+            <p><pre>if (condition) {codegoeshere;} else {anothercodegoeshere;}</pre></p>
             <h4>Examples:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">var a = 1;
+            <p><pre>var a = 1;
 if (a == 12) {
     println("Hi12");
 }
@@ -133,9 +152,9 @@ else {
             </pre></p>
             <h3>2. while</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">while (condition) {codegoeshere;}</pre></p>
+            <p><pre>while (condition) {codegoeshere;}</pre></p>
             <h4>Example:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">
+            <p><pre>
 var a = 2;
 while (a == 2) {
     print(a);
@@ -143,9 +162,9 @@ while (a == 2) {
             </pre></p>
             <h3>3. for</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">for (newvarname, iterable) {codegoeshere;}</pre></p>
+            <p><pre>for (newvarname, iterable) {codegoeshere;}</pre></p>
             <h4>Example:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">
+            <p><pre>
 var a = [1, 2, 3, 4, 5];
 for (b, a) {
     print(b);
@@ -153,9 +172,9 @@ for (b, a) {
             </pre></p>
             <h3>4. until</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">until (condition) {codegoeshere;}</pre></p>
+            <p><pre>until (condition) {codegoeshere;}</pre></p>
             <h4>Example:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">
+            <p><pre>
 var a = 2;
 until (a != 2) {
 print(a);
@@ -167,7 +186,7 @@ a += 1;
             <h4>To create a module, first create a file with extension .kshp, then write the module.</h4>
             <h3>2. Using them</h3>
             <h4>Syntax:</h4>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">using "path/to/module";</pre></p>
+            <p><pre>using "path/to/module";</pre></p>
             <h4>Then use the module by functions (without "modulename.functionname") or vars.</h4>
             <h4>Basically, filedata = module + mainprog</h4>
             <h2 id="print-println">Print and Println</h2>
@@ -180,7 +199,7 @@ a += 1;
             </ul>
             <h2 id="execp">execp</h2>
             <h3>Syntax:</h3>
-            <p><pre style="font-family: Consolas; border-radius: 5px; background-color: #2a2a2a; text-wrap: wrap; text-align: 15%; font-size: 8; line-height: 20px;">execp "pythoncode"</pre></p>
+            <p><pre>execp "pythoncode"</pre></p>
             <h2 id="modules-available">Modules Available</h2>
             <ul>
                 <li>sys</li>
