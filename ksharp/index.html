@@ -19,8 +19,9 @@
                 <li><a href="#modules">Modules</a></li>
                 <li><a href="#print-println">Print and Println</a></li>
                 <li><a href="#rules">Rules</a></li>
-                <li><a href="#execp">execp</a></li>
+                <li><a href="#python">python</a></li>
                 <li><a href="#modules-available">Modules Available</a></li>
+                <li><a href="#classes">Classes</a></li>
             </ul>
             <h4 style="position: absolute; bottom: 0; word-wrap: break-word; font-weight: lighter">Copyright by Kin. </h4>
         </div>
@@ -115,7 +116,7 @@ println(area);
             <p><pre>return value;</pre></p>
             <h4>Example: See "Area calculator"</h4>
             <h3>4. Inheritable functions</h3>
-            <h4>This could be useful for class-like structs (no classes in K#)</h4>
+            <h4>This could be useful for class-like structs <s>(no classes in K#)</s> (1.4 has classes now)</h4>
             <h4>Syntax</h4>
             <p><pre>func funcname : anotherfuncname {code}</pre></p>
             <p><pre>func funcname : anotherfuncname(additionalparams) {code}</pre></p>
@@ -132,7 +133,33 @@ add(1, 2);
 # Value 2: 2
 # Sum: 3
             </pre></p>
-            
+            <h2 id="classes">Classes</h2>
+            <h3>1. Defining a class</h3>
+            <h4>For a base class:</h4>
+            <p><pre>class mybaseclass {
+    mycode;
+}
+            </pre></p>
+            <h4>For an inherited class:</h4>
+            <p><pre>class myclass : mybaseclass {
+    fullcode;
+}
+            </pre></p>
+            <h3>2. Using a class</h3>
+            <h4>var:</h4>
+            <p><pre>var a = new myclass;
+a.mymethod();
+a.myvar = 1;
+            </pre></p>
+            <h4>self</h4>
+            <p><pre>class myclass {
+    var a = 1;
+    func mymethod : self.mymethod {  # do the same of a function
+        println(self.a);   # ref-ing a variable in root of myclass
+        self.a += 1;
+    }
+}
+            </pre></p>
             <h2 id="control-flows">Control flows</h2>
             <h3>1. if / else</h3>
             <h4>Syntax:</h4>
@@ -197,9 +224,9 @@ a += 1;
                 <li>When ref-ing a variable but it's a string, add '' to ends.</li>
                 <li>More rules added soon</li>
             </ul>
-            <h2 id="execp">execp</h2>
+            <h2 id="python">python</h2>
             <h3>Syntax:</h3>
-            <p><pre>execp "pythoncode"</pre></p>
+            <p><pre>python("pythoncode")</pre></p>
             <h2 id="modules-available">Modules Available</h2>
             <ul>
                 <li>sys</li>
