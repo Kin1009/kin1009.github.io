@@ -17,11 +17,12 @@
                 <li><a href="#functions">Functions</a></li>
                 <li><a href="#control-flows">Control Flows</a></li>
                 <li><a href="#modules">Modules</a></li>
-                <li><a href="#print-println">Print and Println</a></li>
-                <li><a href="#rules">Rules</a></li>
+                <li><a href="#print-println">print and println</a></li>
                 <li><a href="#python">python</a></li>
                 <li><a href="#modules-available">Modules Available</a></li>
                 <li><a href="#classes">Classes</a></li>
+                <li><a href="#pointers">Pointers</a></li>
+                <li><a href="#references">References</a></li>
             </ul>
             <h4 style="position: absolute; bottom: 0; word-wrap: break-word; font-weight: lighter">Copyright by Kin. </h4>
         </div>
@@ -219,11 +220,36 @@ a += 1;
             <h2 id="print-println">Print and Println</h2>
             <h3>So basically, print(text) is print(text, end='') in python</h3>
             <h3>println(text) however is print(text) in python</h3>
-            <h2 id="rules">Rules</h2>
-            <ul>
-                <li>When ref-ing a variable but it's a string, add '' to ends.</li>
-                <li>More rules added soon</li>
-            </ul>
+            <h2 id="pointers">Pointers</h2>
+            <h3>1. Getting a pointer</h3>
+            <p><pre>
+func main(args) {
+    var a = 1;
+    var pointer = &a;
+    print(pointer); #id
+}
+            </pre></p>
+            <h3>2. Getting a value from a pointer</h3>
+            <p><pre>
+func main(args) {
+    var a = 1;
+    var pointer = &a;
+    println(pointer); #id
+    var myval = *pointer;
+    println(myval); # 1
+}
+            </pre></p>
+            <h2 id="references">References</h2>
+            <p><pre>
+func change_var(:ref) {
+    :ref += 1;
+}
+func main(args) {
+    var a = 1;
+    change_var(a);
+    print(a); # 2
+}
+            </pre></p>
             <h2 id="python">python</h2>
             <h3>Syntax:</h3>
             <p><pre>python("pythoncode")</pre></p>
@@ -245,6 +271,7 @@ a += 1;
                 <li>qtcore</li>
                 <li>qtwidget</li>
                 <li>qtgui</li>
+                <li>ctypes</li>
             </ul>
             <h2 id="copyright">Copyright ©</h2>
             <h4><pre style="word-wrap: break-word; font-weight: lighter;">Copyright Notice
