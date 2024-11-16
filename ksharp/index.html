@@ -10,7 +10,8 @@
     <div class="container">
         <div class="sidebar">
             <img src="ksharp.png" alt="Documentation Image">
-            <a href="https://github.com/Kin1009/KSharp">Download K#</a>
+            <a href="https://drive.google.com/drive/folders/1ygNvL3y44Y0gZpFXp1G6X8_xtMitlw91">Download!</a>
+            <a href="https://github.com/Kin1009/KSharp">Changelog</a>
             <p></p>
             <ul>
                 <li><a href="#variables">Variables</a></li>
@@ -239,6 +240,18 @@ func main(args) {
     println(myval); # 1
 }
             </pre></p>
+            <h3>3. Changing a variable based on a pointer variable</h3>
+            <p><pre>
+func main(args) {
+    var a = 1;
+    var pointer = &a;
+    println(pointer); #id
+    var myval = *pointer;
+    println(myval); # 1
+    *pointer += 1;
+    println(a); # 2
+}
+            </pre></p>
             <h2 id="references">References</h2>
             <p><pre>
 func change_var(:ref) {
@@ -250,6 +263,21 @@ func main(args) {
     print(a); # 2
 }
             </pre></p>
+            <h2 id="dll">DLL modules</h2>
+            <h3>We're using user32 as the dll file here. Available on System32.</h3>
+            <h3>1. Initialize the module</h3>
+            <p><pre>
+extern "user32.dll" as user32;
+            </pre></p>
+            <h3>2. Make function headers (MessageBoxW)</h3>
+            <p><pre>
+extern "user32.dll" as user32;
+dllfunc uint user32.MessageBoxW(void, wchar, wchar, uint);
+            </pre></p>
+            <h3>3. Call the function</h3>
+            <p><pre>user32.MessageBoxW(0, "hello", "testing", 0);</pre></p>
+            <h3>4 (optional). Store in a variable</h3>
+            <p><pre>var a = user32.MessageBoxW(0, "hello", "testing", 0); # 1</pre></p>
             <h2 id="python">python</h2>
             <h3>Syntax:</h3>
             <p><pre>python("pythoncode")</pre></p>
