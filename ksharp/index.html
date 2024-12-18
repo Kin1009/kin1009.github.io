@@ -282,6 +282,20 @@ dllfunc uint user32.MessageBoxW(void, wchar, wchar, uint);
             <h2 id="python">python</h2>
             <h3>Syntax:</h3>
             <p><pre>python("pythoncode")</pre></p>
+            <h2 id="resolve">Resolving modules</h2>
+            <h4>So, sometimes there is not a module and K# errors cuz theres no module</h3>
+            <h4>We can use <p><pre>download</pre></p> and <p><pre>dexists</pre></p> to automatically install it.</h3>
+            <h3>Syntax:</h3>
+            <h4>To download a module:</h4>
+            <p><pre>download "user/repo";</pre></p>
+            <h4>To check if a module exists:</h4>
+            <p><pre>dexists("modulename")</pre></p>
+           
+           
+           
+           
+           
+           
             <h2 id="modules-available">Modules Available</h2>
             <h3>NOTE: Since new Python 3.13 released, PySide6 didn't support Python 3.13. So, PySide6 and it's libraries will not be included until notice.</h3>
             <ul>
